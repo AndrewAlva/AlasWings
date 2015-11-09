@@ -1,0 +1,1107 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>SUCURSALES | Alas Wings</title>
+		<link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+		<style>
+			/* INIT TAB STYLING */
+				body, *{
+					margin: 0;
+					padding: 0;
+				}
+
+				body{
+					background-color: #222222;
+				}
+
+				#fullWrapper{
+					position: absolute;
+					width: 100%;
+					height: 1200px;
+					overflow: hidden;
+					background-color: #222222;
+				}
+
+				#tabWrapper{
+					position: absolute;
+					width: 810px;
+					height: 100%;
+					margin: auto;
+					right: 0; left: 0;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/fondo.png');
+					-webkit-background-size: 100%;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					box-shadow: 0px 0px 50px #000;
+					overflow: hidden;
+				}
+
+				.allowScroll{
+					overflow: scroll !important;
+				}
+
+				.fullTab{
+					height: 2450px !important;
+				}
+
+				.fullTab2{
+					height: 2000px !important;
+				}
+
+				.shortTab{
+					height: 1200px !important;
+				}
+			/* END TAB STYLING  */
+
+			/* INIT LOADER STYLING */
+				#loadingScreen{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: #6c0a0e;
+				}
+
+				#logoLoader{
+					position: absolute;
+					width: 500px;
+					height: 400px;
+					margin: auto;
+					top: 100px; right: 0; left: 0;
+					z-index: 1000;
+				}
+
+				#logoLoader img{
+					width: 100%;
+				}
+
+				#loadingAnimation{
+					position: absolute;
+					margin: auto;
+					left: 0; right: 0;
+					top: 600px;
+					width: 50px;
+					height: 50px;
+					animation-name: loader;
+				    animation-duration: 2.6s;
+				    animation-timing-function: ease-in-out;
+				    animation-iteration-count: infinite;
+				}
+
+				@keyframes loader {
+				    0%   {
+				    		-webkit-transform: rotate(0deg);
+				    		   -moz-transform: rotate(0deg);
+				    		    -ms-transform: rotate(0deg);
+				    		     -o-transform: rotate(0deg);
+				    				transform: rotate(0deg);}
+				    50%  {
+				    		-webkit-transform: rotate(900deg);
+				    		   -moz-transform: rotate(900deg);
+				    		    -ms-transform: rotate(900deg);
+				    		     -o-transform: rotate(900deg);
+				    				transform: rotate(900deg);}
+				    100% {
+				    		-webkit-transform: rotate(1800deg);
+				    		   -moz-transform: rotate(1800deg);
+				    		    -ms-transform: rotate(1800deg);
+				    		     -o-transform: rotate(1800deg);
+				    				transform: rotate(1800deg);}
+				}
+
+				#circle1{
+					position: absolute;
+					margin: auto;
+					left: 0; right: 0;
+					top: 0;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #fff;
+				}
+
+				#circle2{
+					position: absolute;
+					margin: auto;
+					left: 0; right: 0;
+					bottom: 0;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #fff;
+				}
+
+				#circle3{
+					position: absolute;
+					margin: auto;
+					top: 0; bottom: 0;
+					left: 5px;
+					width: 7px;
+					height: 7px;
+					border-radius: 50%;
+					background-color: #fff;
+				}
+
+				#circle4{
+					position: absolute;
+					margin: auto;
+					top: 0; bottom: 0;
+					right: 5px;
+					width: 7px;
+					height: 7px;
+					border-radius: 50%;
+					background-color: #fff;
+				}
+			/* END LOADER STYLING  */
+
+
+			/* INIT MUNICIPIOS STYLING */
+				#mapWrapper{
+					position: absolute;
+					width: 100%;
+					height: 590px;
+					top: 280px;
+				}
+
+				.municipios{
+					position: absolute;
+					-webkit-background-size: cover;
+					background-size: cover;
+					opacity: 0;
+				}
+
+				/*Zapopan*/
+				#municipio1{
+					width: 402px;
+					height: 339px;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/zapopan.png');
+					top: 9px;
+					left: 139px;
+				}
+
+				/*Guadalajara*/
+				#municipio2{
+					width: 373px;
+					height: 237px;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/guadalajara.png');
+					top: 90px;
+					left: 282px;
+				}
+				
+				/*Tlaquepaque*/
+				#municipio3{
+					width: 434px;
+					height: 207px;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/tlaquepaque.png');
+					top: 220px;
+					left: 240px;
+				}
+				
+				/*Tlajomulco*/
+				#municipio4{
+					width: 675px;
+					height: 288px;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/tlajomulco.png');
+					top: 292px;
+					left: 75px;
+				}
+			/* END MUNICIPIOS STYLING  */
+
+			/* INIT SPOTS STYLING */
+				.spotsMap{
+					position: absolute;
+					width: 67px;
+					height: 90px;
+					cursor: pointer;
+				}
+
+				.spotsMap img{
+					position: absolute;
+					margin: auto;
+					right: 0;
+					left: 0;
+					top: 0;
+					bottom: 0;
+				}
+
+				/*Zapopan*/
+				#spot1{
+					top: 85px;
+					left: 239px;
+				}
+
+				/*Guadalajara*/
+				#spot2{
+					top: 149px;
+					left: 435px;
+				}
+
+				/*Tlaquepaque*/
+				#spot3{
+					top: 264px;
+					left: 417px;
+				}
+
+				/*Tlajomulco*/
+				#spot4{
+					top: 397px;
+					left: 355px;
+				}
+			/* END SPOTS STYLING  */
+
+			/* INIT LIGHTBOXES STYLING */
+				#lightboxWrapper{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: -2000px;
+					overflow-y: scroll;
+					overflow-x: hidden;
+				}
+
+				.closers{
+					position: absolute;
+					width: 39px;
+					height: 39px;
+					top: 120px;
+					right: 30px;
+					cursor: pointer;
+
+				}
+
+				.addressWrappers{
+					position: absolute;
+					margin: auto;
+					top: 110px;
+					right: 0;
+					left: 0;
+					width: 577px;
+				}
+
+				#bgLightbox1{
+					position: absolute;
+					width: 100%;
+					height: 2450px;
+					background-color: rgba(20,20,20,0.5);
+				}
+
+				#addressWrapper1, #addressWrapper2, #addressWrapper3, #addressWrapper4, #addressWrapper5{
+					/*top: -2340px;*/
+					left: -2000px;
+					opacity: 0;
+				}
+
+				#closeLB1, #closeLB2, #closeLB3, #closeLB4, #closeLB5{
+					right: -2000px;
+					opacity: 0;
+				}
+
+				.locations{
+					position: relative;
+					width: 100%;
+					height: 189px;
+					margin-bottom: 45px;
+				}
+
+				.locations:nth-child(even) .gMap {
+					float: left;
+				}
+
+				.locations:nth-child(odd) .gMap {
+					float: right;
+				}
+
+				.locations:nth-child(even) .textMap {
+					text-align: left;
+					float: left;
+					margin-left: -7px;
+
+				}
+
+				.locations:nth-child(odd) .textMap {
+					text-align: right;
+					float: right;
+					margin-right: -8px;
+				}
+
+				.locations:nth-child(even) .textMap h1, .locations:nth-child(even) .textMap p {
+					text-align: left;
+					float: left;
+					padding-left: 27px;
+
+				}
+
+				.locations:nth-child(odd) .textMap h1, .locations:nth-child(odd) .textMap p {
+					text-align: right;
+					float: right;
+					padding-right: 28px;
+				}
+
+				.gMap{
+					position: relative;
+					width: 189px;
+					height: 100%;
+				}
+
+				.textMap{
+					width: 388px;
+					height: 100%;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/tabla.png');
+					-webkit-background-size: 100%;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					font-family: 'Play', sans-serif;
+				}
+
+				.textMap h1{
+					width: 80%;
+					margin-top: 20px;
+					margin-bottom: 5px;
+					color: #fedc0a;
+					font-weight: 700;
+					font-size: 18px;
+					text-shadow: 2px 2px 2px #202020;
+				}
+
+				#titleFuente{
+					margin-top: 10px !important;
+				}
+
+				.textMap p{
+					width: 80%;
+					color: #fff;
+					font-weight: 400;
+					font-size: 15px;
+					text-shadow: 2px 2px 2px #202020;
+				}
+			/* END LIGHTBOXES STYLING  */
+
+			/* INIT SUCURSALES GUANAJUATO */
+				#mapGuanajuato{
+					position: absolute;
+					width: 100%;
+					height: 200px;
+					bottom: 0;
+					background-color: rgba(20,20,20,0.6);
+				}
+
+				#showLeon{
+					position: absolute;
+					width: 400px;
+					height: 133px;
+					margin: auto;
+					top: 0; bottom: 0;
+					left: 0; right: 0;
+					cursor: pointer;
+				}
+
+				#addressWrapper5{
+					top: 760px;
+				}
+
+				#closeLB5{
+					top: 700px;
+				}
+			/* END SUCURSALES GUANAJUATO  */
+
+			/* INIT HELPERS */
+				.hidden{
+					display: none;
+					visibility: hidden;
+				}
+			/* END HELPERS */
+		</style>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
+	</head>
+	
+	<body>
+		<div id="fullWrapper">
+			<div id="tabWrapper">
+
+				<div id="mapWrapper">
+					<div id="municipio1" class="municipios"></div>
+					<div id="municipio2" class="municipios"></div>
+					<div id="municipio3" class="municipios"></div>
+					<div id="municipio4" class="municipios"></div>
+
+					<div id="spot1" class="spotsMap">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/spot_amarillo.png" alt="Spot Alas Wings">
+					</div>
+					<div id="spot2" class="spotsMap">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/spot_amarillo.png" alt="Spot Alas Wings">
+					</div>
+					<div id="spot3" class="spotsMap">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/spot_amarillo.png" alt="Spot Alas Wings">
+					</div>
+					<div id="spot4" class="spotsMap">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/spot_amarillo.png" alt="Spot Alas Wings">
+					</div>
+				</div>
+
+				<div id="mapGuanajuato">
+					<div id="showLeon">
+						<img src="http://alaswings.com/wp-content/uploads/2014/06/sucursales-guanajuato-img.png" alt="Sucursales Guanajuato" title="Sucursales Guanajuato">
+					</div>
+				</div>
+
+				<div id="loadingScreen">
+					<div id="logoLoader">
+						<img src="http://www.luckyideas.mx/out/wings/tab-fb/img/aw-logo.svg" alt="Alas Wings">
+					</div>
+
+					<div id="loadingAnimation">
+						<div id="circle1"></div>
+						<div id="circle2"></div>
+						<div id="circle3"></div>
+						<div id="circle4"></div>
+					</div>
+				</div>
+
+				<div id="lightboxWrapper">
+
+					<!-- Zapopan -->
+					<div id="lightbox1" class="lightboxes">
+						<div id="bgLightbox1"></div>
+
+						<div id="closeLB1" class="closers">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Cerrar Alas Wings">
+						</div>
+
+						<div id="addressWrapper1" class="addressWrappers">
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7465.272090535155!2d-103.44365!3d20.684381!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5285879c3caa79a8!2sAlasWings!5e0!3m2!1ses!2smx!4v1439930522720" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<div class="textMap">
+									<h1>Ciudad Granja</h1>
+									<p>
+										Calz. Central 111 <br>
+										Local 20 a 20 metros de la Nissan <br>
+										Col: Ciudad Granja <br>
+										CP: 45010 <br>
+										Zapopan, Jal. <br>
+										Tel: 1657-2557 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29864.242054775816!2d-103.415753!3d20.668348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae9afb2941c5%3A0x76dc0cf3a5255870!2sAv+Manuel+J.+Clouthier+290%2C+Lomas+de+Guadalupe%2C+45020+Zapop%C3%A1n%2C+Jal.%2C+M%C3%A9xico!5e0!3m2!1ses!2smx!4v1439931060158" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Clouthier</h1>
+									<p>
+										Av. Clouthier 290 Esq: San Juan de Letrán <br>
+										Col: Jardines de Guadalupe <br>
+										CP: 45038 <br>
+										Zapopan, Jal. <br>
+										Tel: 3165-1249 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3733.242842001175!2d-103.423229!3d20.659697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x364780922d4463bd!2sAlas+Wings+Cordilleras!5e0!3m2!1ses!2smx!4v1439931118741" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Cordilleras</h1>
+									<p>
+										Av. Patria 915-3 (Entre Av. Clouthier y Av. Guadalupe) <br>
+										Col: Jardines de Tepeyac <br>
+										CP: 45034 <br>
+										Zapopan, Jal. <br>
+										Tel: 3125-0241 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14930.047172796842!2d-103.429422!3d20.689432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428aec23e8f2c83%3A0x20f768607615f5ba!2sAv+Naciones+Unidas+5590%2C+Parque+Regency%2C+45117+Zapop%C3%A1n%2C+Jal.%2C+M%C3%A9xico!5e0!3m2!1ses!2smx!4v1439931545187" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Naciones Unidas</h1>
+									<p>
+										Av. Naciones Unidas 5590 A Esq: Dante Alighieri <br>
+										Col: Vallarta Universidad <br>
+										CP: 45110 <br>
+										Zapopan, Jal. <br>
+										Tel: 3165-1904 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14934.93771018419!2d-103.41927!3d20.639679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x81c0e08c18cb46cd!2sAlas+Wings!5e0!3m2!1ses!2smx!4v1439931592699" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Patria / El Colli</h1>
+									<p>
+										Av. Patria 2945 – A Casi esq: Mariano Otero <br>
+										Col: El Colli <br>
+										CP: 45070 <br>
+										Zapopan, Jal. <br>
+										Tel: 3628-3121 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14926.088718843144!2d-103.435096!3d20.729619!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbacdce070223c043!2sAlasWings+Real+Center!5e0!3m2!1ses!2ses!4v1439931624325" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Real Center</h1>
+									<p>
+										Av. Santa Margarita #3600, Local C01 y C02 <br>
+										Col: Santa Margarita <br>
+										CP: 45140 <br>
+										Zapopan, Jal. <br>
+										Tel: 1561-0517 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14925.063705652829!2d-103.385793!3d20.740013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af915b0d30ad%3A0xc6805f7c6e3b3b37!2zUGVyaWbDqXJpY28sIDQ1MTUwIFphcG9ww6FuLCBKYWwuLCBNw6l4aWNv!5e0!3m2!1ses!2smx!4v1439931654788" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>San Isidro</h1>
+									<p>
+										Periférico Norte 203 L-8 <br>
+										Col: Bosques de San Isidro frente a Plaza San Isidro <br>
+										CP: 45133 <br>
+										Zapopan, Jal. <br>
+										Tel: 1566-7144
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14923.140062482713!2d-103.440401!3d20.759506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9a246df8de616e0!2sAlasWings+Santa+Margarita!5e0!3m2!1ses!2smx!4v1439931693478" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Santa Margarita</h1>
+									<p>
+										Av. Tesistán #1579 A 5 cuadras de la prepa 7 <br>
+										Col: Residencial Santa Margarita <br>
+										CP: 45138 <br>
+										Zapopan, Jal. <br>
+										Tel: 3685-6423 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14925.426175050394!2d-103.360791!3d20.736338!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x559947c579be60e2!2sALASWINGS+(alitas+y+cervezas)+TABACHINES!5e0!3m2!1ses!2smx!4v1439931723875" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Tabachines</h1>
+									<p>
+										Av. de los Tabachines 1464 A Esq: Paseo de las Acacias <br>
+										Col: Tabachines <br>
+										CP: 45188 <br>
+										Zapopan, Jal. <br>
+										Tel: 1814-5006 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7462.494073237618!2d-103.399365!3d20.740779!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc07a0dd48cfdee8f!2sAlasWings+Valdepe%C3%B1as!5e0!3m2!1ses!2ses!4v1439931780015" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Valdepeñas</h1>
+									<p>
+										Av. Valdepeñas #8630 <br>
+										Col: Real de Valdepeñas <br>
+										CP: 45130 <br>
+										Zapopan, Jal. <br>
+										Tel: 2014-7657 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Guadalajara -->
+					<div id="lightbox2" class="lightboxes">
+						<div id="closeLB2" class="closers">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Cerrar Alas Wings">
+						</div>
+
+						<div id="addressWrapper2" class="addressWrappers">
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14929.60015002245!2d-103.39457400000002!3d20.693974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3555921410d3247!2sAlas+Wings!5e0!3m2!1ses!2smx!4v1439933610622" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<div class="textMap">
+									<h1>Ávila Camacho</h1>
+									<p>
+										Av. Ávila Camacho 2386 Casi esq: Av. De la Presa <br>
+										Col: Jardines del Country <br>
+										CP: 44210 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3823-0547 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14932.352346662505!2d-103.395091!3d20.665995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x512077ccfa804895!2sAlasWings!5e0!3m2!1ses!2smx!4v1439934091380" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Chapalita</h1>
+									<p>
+										Av. Lázaro Cárdenas 3294 Esq: Calle San Miguel <br>
+										Col: Chapalita <br>
+										CP: 44500 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3121-2460 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14932.307421770196!2d-103.367793!3d20.666452!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb36b8338abef22c8!2sAlas+Wings!5e0!3m2!1ses!2sus!4v1439934135211" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Chapultepec</h1>
+									<p>
+										Av. Chapultepec 605 Esq: Francia <br>
+										Col: Americana (Glorieta Niños Héroes) <br>
+										CP: 44160 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3810-3333 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14930.179332628526!2d-103.334781!3d20.688089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b19539672b5b%3A0xd135e4803d30c564!2sCalz+Independencia+Nte+806%2C+Independencia+Oriente%2C+44340+Guadalajara%2C+Jal.%2C+M%C3%A9xico!5e0!3m2!1ses!2smx!4v1439934161866" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1 id="titleFuente">Fuente Olímpica</h1>
+									<p>
+										Avenida Calzada Independencia No. 806, entre Avenida Monte Cáucaso y calle Salvador de Quevedo y Zubieta <br>
+										Col: Independencia Oriente, <br>
+										CP: 44379 <br>
+										Guadalajara, Jalisco. <br>
+										Tel: 3617-4812 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3733.6794175692376!2d-103.39150300000001!3d20.641920000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4da5c13e3d29c82b!2sAlas+Wings!5e0!3m2!1ses!2smx!4v1439934199594" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Lapizlázuli</h1>
+									<p>
+										Av. Lapizlázuli 2570 Esq: Islote <br>
+										Col: Bosques de la Victoria <br>
+										CP: 44540 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3623-0882 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14929.738341453285!2d-103.37502!3d20.69257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x693df748ffc3f2ea!2sAlas+Wings!5e0!3m2!1ses!2smx!4v1439934227785" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>López Mateos</h1>
+									<p>
+										Av. López Mateos 1038-1 <br>
+										Plaza Florencia <br>
+										Col: Italia Providencia <br>
+										CP: 44648 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3817-1369 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29866.230473218508!2d-103.329341!3d20.658233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18fa15d5849b880d!2sAlas+Wings!5e0!3m2!1ses!2ses!4v1439934255489" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Marcelino García Barragan</h1>
+									<p>
+										Av. Marcelino Garcia Barragan #1291 <br>
+										Col: Unidad Modelo <br>
+										CP: 44420 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3619-1837 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14931.363386196464!2d-103.36956!3d20.676053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53f3a20a0a258a6d!2sAlasWings+Morelos!5e0!3m2!1ses!2smx!4v1439934292873" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Morelos</h1>
+									<p>
+										Escuela Militar de Aviación #6 esq. calle Morelos <br>
+										Col: Ladrón de Guevara <br>
+										CP: 44600 <br>
+										Guadalajara, Jal. <br>
+										Tel: 3615-0024 <br>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+					<!-- Tlaquepaque -->
+					<div id="lightbox3" class="lightboxes">
+						<div id="closeLB3" class="closers">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Cerrar Alas Wings">
+						</div>
+
+						<div id="addressWrapper3" class="addressWrappers">
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.7144002554273!2d-103.2828617!3d20.6404949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b391cdd23cb3%3A0x7d5e0f60611a2e21!2sAlasWings+Parque+de+Tlaquepaque!5e0!3m2!1ses-419!2smx!4v1444313645707" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<div class="textMap">
+									<h1>Patria / Parque de Tlaquepaque</h1>
+									<p>
+										Av. Patria 2198 <br>
+										Col: Parque de Tlaquepaque <br>
+										CP: 45525 <br>
+										Tlaquepaque, Jal. <br>
+										<strong>Tel: 1306-6183</strong>
+										<strong>Servicio a domicilio: No Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+					<!-- Tlajomulco -->
+					<div id="lightbox4" class="lightboxes">
+						<div id="closeLB4" class="closers">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Cerrar Alas Wings">
+						</div>
+
+						<div id="addressWrapper4" class="addressWrappers">
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.0217273594476!2d-103.36620539999997!3d20.546291900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f52a14ccad883%3A0x5db035a43d5f29f4!2sAlas+Wings+Real+del+Valle!5e0!3m2!1ses!2smx!4v1439935005004" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<div class="textMap">
+									<h1>Real del Valle</h1>
+									<p>
+										Av. San Victor 1087 B (Plaza Francia) <br>
+										Col: Fracc. Real del Valle <br>
+										CP: 45654 <br>
+										Tlajomulco, Jal. <br>
+										Tel: 3797-4222 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14941.419830944893!2d-103.365276!3d20.573557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e5fe6d67e787dbb!2sAlas+Wings!5e0!3m2!1ses!2smx!4v1439935084968" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+								<div class="textMap">
+									<h1>Toluquilla</h1>
+									<p>
+										Av. Adolfo B. Horn Jr. 72 Plaza Toluquilla, Local 14 Esq: Juan Álvarez <br>
+										Col: Toluquilla <br>
+										CP: 45610 <br>
+										Tlajomulco, Jal. <br>
+										Tel: 1592-9069 <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+					<!-- León // Guanajuato -->
+					<div id="lightbox5" class="lightboxes">
+						<div id="closeLB5" class="closers">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Cerrar Alas Wings">
+						</div>
+
+						<div id="addressWrapper5" class="addressWrappers">
+							<div class="locations">
+								<div class="gMap">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14886.695028015236!2d-101.628151!3d21.125569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76c841e31c249372!2sAlasWings+Le%C3%B3n!5e0!3m2!1ses!2smx!4v1444791230837" width="189" height="189" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+								<div class="textMap">
+									<h1>León</h1>
+									
+									
+									<p>
+										Blvd. José María Morelos #2913 Local 5 <br>
+										Col: Cañada de Alfaro <br>
+										León, Guanajuato <br>
+										<strong>Tel: 477-218-7790</strong> <br>
+										<strong>Servicio a domicilio: Disponible.</strong>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+
+		<script>
+			jQuery(document).ready(function($) {
+				// INIT LOADER ANIMATION
+					setTimeout(function(){
+						$('#loadingScreen').velocity("fadeOut",{duration: 200});
+					},8000);	
+				// END LOADER ANIMATION
+
+				// INIT SPOTS HOVER APPEARS
+					// SPOT 1 ZAPOPAN HOVER APPEARS
+					$('#spot1').mouseenter(function() {
+						$('#municipio1').stop(true).velocity("fadeIn",{duration: 400});
+					});
+
+					$('#spot1').mouseleave(function() {
+						$('#municipio1').velocity("fadeOut",{duration: 200});
+					});
+
+
+
+					// SPOT 2 GUADALAJARA HOVER APPEARS
+					$('#spot2').mouseenter(function() {
+						$('#municipio2').stop(true).velocity("fadeIn",{duration: 400});
+					});
+
+					$('#spot2').mouseleave(function() {
+						$('#municipio2').velocity("fadeOut",{duration: 200});
+					});
+
+
+
+					// SPOT 3 TLAQUEPAQUE HOVER APPEARS
+					$('#spot3').mouseenter(function() {
+						$('#municipio3').stop(true).velocity("fadeIn",{duration: 400});
+					});
+
+					$('#spot3').mouseleave(function() {
+						$('#municipio3').velocity("fadeOut",{duration: 200});
+					});
+
+
+
+					// SPOT 4 TLAJOMULCO HOVER APPEARS
+					$('#spot4').mouseenter(function() {
+						$('#municipio4').stop(true).velocity("fadeIn",{duration: 400});
+					});
+
+					$('#spot4').mouseleave(function() {
+						$('#municipio4').velocity("fadeOut",{duration: 200});
+					});
+				// END SPOTS HOVER APPEARS
+
+				// INIT SPOTS CLICK SHOW LIGHTBOX
+					// INIT SPOT1 CLICK SHOW LIGHTBOX
+						$('#spot1').click(function(event) {
+							event.preventDefault();
+							$('#tabWrapper').addClass('allowScroll');
+							$('#lightboxWrapper').velocity({left: 0}, 500);
+							$('#addressWrapper1').velocity({left: 0}, 1000);
+							$('#closeLB1').velocity({right: 30}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper1').velocity({opacity: 1}, {queue: false});
+								$('#closeLB1').velocity({opacity: 1}, {queue: false});
+							},500);
+							
+						});
+
+
+						$('#closeLB1').click(function(event) {
+							event.preventDefault();
+							$('#tabWrapper').removeClass('allowScroll');
+							$('#lightboxWrapper').velocity({left: -2000}, 500);
+							$('#addressWrapper1').velocity({left: -2000}, 1000);
+							$('#closeLB1').velocity({right: -2000}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper1').velocity({opacity: 0}, {queue: false});
+								$('#closeLB1').velocity({opacity: 0}, {queue: false});
+							},500);
+							
+						});
+					// END SPOT1 CLICK SHOW LIGHTBOX
+
+
+
+					// INIT SPOT2 CLICK SHOW LIGHTBOX
+						$('#spot2').click(function(event) {
+							event.preventDefault();
+							$('#tabWrapper').addClass('allowScroll');
+							$('#lightboxWrapper').velocity({left: 0}, 500);
+							$('#addressWrapper2').velocity({left: 0}, 1000);
+							$('#closeLB2').velocity({right: 30}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper2').velocity({opacity: 1}, {queue: false});
+								$('#closeLB2').velocity({opacity: 1}, {queue: false});
+							},500);
+							
+						});
+
+
+						$('#closeLB2').click(function(event) {
+							event.preventDefault();
+							$('#tabWrapper').removeClass('allowScroll');
+							$('#lightboxWrapper').velocity({left: -2000}, 500);
+							$('#addressWrapper2').velocity({left: -2000}, 1000);
+							$('#closeLB2').velocity({right: -2000}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper2').velocity({opacity: 0}, {queue: false});
+								$('#closeLB2').velocity({opacity: 0}, {queue: false});
+							},500);
+							
+						});
+					// END SPOT2 CLICK SHOW LIGHTBOX
+
+
+
+					// INIT SPOT3 CLICK SHOW LIGHTBOX
+						$('#spot3').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').addClass('shortTab');
+							$('#lightboxWrapper').velocity({left: 0}, 500);
+							$('#addressWrapper3').velocity({left: 0}, 1000);
+							$('#closeLB3').velocity({right: 30}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper3').velocity({opacity: 1}, {queue: false});
+								$('#closeLB3').velocity({opacity: 1}, {queue: false});
+							},500);
+							
+						});
+
+
+						$('#closeLB3').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').removeClass('shortTab');
+							$('#lightboxWrapper').velocity({left: -2000}, 500);
+							$('#addressWrapper3').velocity({left: -2000}, 1000);
+							$('#closeLB3').velocity({right: -2000}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper3').velocity({opacity: 0}, {queue: false});
+								$('#closeLB3').velocity({opacity: 0}, {queue: false});
+							},500);
+							
+						});
+					// END SPOT3 CLICK SHOW LIGHTBOX
+
+
+
+					// INIT SPOT4 CLICK SHOW LIGHTBOX
+						$('#spot4').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').addClass('shortTab');
+							$('#lightboxWrapper').velocity({left: 0}, 500);
+							$('#addressWrapper4').velocity({left: 0}, 1000);
+							$('#closeLB4').velocity({right: 30}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper4').velocity({opacity: 1}, {queue: false});
+								$('#closeLB4').velocity({opacity: 1}, {queue: false});
+							},500);
+							
+						});
+
+
+						$('#closeLB4').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').removeClass('shortTab');
+							$('#lightboxWrapper').velocity({left: -2000}, 500);
+							$('#addressWrapper4').velocity({left: -2000}, 1000);
+							$('#closeLB4').velocity({right: -2000}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper4').velocity({opacity: 0}, {queue: false});
+								$('#closeLB4').velocity({opacity: 0}, {queue: false});
+							},500);
+							
+						});
+					// END SPOT4 CLICK SHOW LIGHTBOX
+
+
+
+
+					// INIT SPOT5 CLICK SHOW LIGHTBOX
+						$('#showLeon').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').addClass('shortTab');
+							$('#lightboxWrapper').velocity({left: 0}, 500);
+							$('#addressWrapper5').velocity({left: 0}, 1000);
+							$('#closeLB5').velocity({right: 30}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper5').velocity({opacity: 1}, {queue: false});
+								$('#closeLB5').velocity({opacity: 1}, {queue: false});
+							},500);
+							
+						});
+
+
+						$('#closeLB5').click(function(event) {
+							event.preventDefault();
+							$('#bgLightbox1').removeClass('shortTab');
+							$('#lightboxWrapper').velocity({left: -2000}, 500);
+							$('#addressWrapper5').velocity({left: -2000}, 1000);
+							$('#closeLB5').velocity({right: -2000}, 1000);
+							setTimeout(function(){
+								$('#addressWrapper5').velocity({opacity: 0}, {queue: false});
+								$('#closeLB3').velocity({opacity: 0}, {queue: false});
+							},500);
+							
+						});
+					// END SPOT5 CLICK SHOW LIGHTBOX
+				// END SPOTS CLICK SHOW LIGHTBOX
+				});
+		</script>
+	</body>
+</html>

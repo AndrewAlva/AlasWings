@@ -1,0 +1,1772 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Alas Wings | MENU</title>
+		<link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+		<style>
+			/*INIT TAB STYLE*/
+				body, *{
+					margin: 0;
+					padding: 0;
+				}
+
+				body{
+					background-color: #222222;
+					font-family: 'Play', sans-serif;
+				}
+
+				#fbTabWrapper{
+					position: absolute;
+					width: 100%;
+					height: 1324px;
+					/*height: 1114px;*/
+					overflow: hidden;
+					background-color: #222222;
+				}
+
+				#fullWrapper{
+					position: absolute;
+					width: 810px;
+					height: 100%;
+					margin: auto;
+					right: 0; left: 0;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/bg-menu.png');
+					-webkit-background-size: 100%;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: 0px 210px;
+					box-shadow: 0px 0px 50px #000;
+				}
+
+				.hideObject {
+					display: none;
+				}
+
+				.hidePromo {
+					opacity: 0 !important;
+					left: -100px !important;
+				}
+			/*END TAB STYLE*/
+
+			/*INIT LOADER STYLE*/
+				#loaderWrapper{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: #000;
+					z-index: 1000000000;
+					opacity: 1;
+					-webkit-transition: all .7s ease-in-out;
+					   -moz-transition: all .7s ease-in-out;
+						-ms-transition: all .7s ease-in-out;
+						 -o-transition: all .7s ease-in-out;
+							transition: all .7s ease-in-out;
+				}
+
+				.hideLoader{
+					opacity: 0 !important;
+				}
+
+				.eraseLoader{
+					display: none;
+				}
+
+
+				#logo-Loader{
+					position: absolute;
+					width: 400px;
+					margin: auto;
+					right: 0; left: 0;
+					top: 50px;
+				}
+
+				#logo-Loader img{
+					width: 100%;
+				}
+
+				#loader{
+					position: absolute;
+					width: 220px;
+					height: 220px;
+					margin: auto;
+					right: 0; left: 0;
+					top: 420px;
+					border-radius: 50%;
+					overflow: hidden;
+
+					-webkit-transition: all .7s ease-in-out;
+					   -moz-transition: all .7s ease-in-out;
+						-ms-transition: all .7s ease-in-out;
+						 -o-transition: all .7s ease-in-out;
+							transition: all .7s ease-in-out;
+				}
+
+				.intervalLoader{
+					width: 70px !important;
+					height: 70px !important;
+				}
+
+					#bubbleWrapper{
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						background-color: #000;
+						-webkit-filter: brightness(2.5) contrast(12);
+	 					filter: brightness(2.5) contrast(12);
+	 					animation: spin 3.5s ease-in-out infinite;
+					}
+
+						#bigBubble{
+							width: 40px;
+							height: 40px;
+							right: 0; left: 0;
+							border-radius: 50%;
+							
+						}
+
+						#littleBubble{
+							width: 30px;
+							height: 30px;
+							left: 20px;
+							border-radius: 50%;
+						}
+
+						#tinyBubble{
+							width: 20px;
+							height: 20px;
+							right: 10px;
+							border-radius: 50%;
+						}
+
+						.shape{
+							position: absolute;
+							margin: auto;
+							top: 0; bottom: 0;
+							border-radius: 50%;
+							background-color: #fff;
+							-webkit-filter: blur(11px);
+		 							filter: blur(11px);
+						}
+
+					@keyframes spin {
+					    0%  	{-webkit-transform: rotate(0deg);
+					    		 -moz-transform: rotate(0deg);
+					    		 -mstransform: rotate(0deg);
+					    		 -o-transform: rotate(0deg);
+					    		 transform: rotate(0deg);
+					    		}
+					    100%	{-webkit-transform: rotate(1440deg);
+					    		 -moz-transform: rotate(1440deg);
+					    		 -mstransform: rotate(1440deg);
+					    		 -o-transform: rotate(1440deg);
+					    		 transform: rotate(1440deg);
+					    		}
+					}
+			/*END LOADER STYLE*/
+
+			/* INIT PROMOS STYLE */
+				#promosBg{
+					position: absolute;
+					width: 100%;
+					height: 644px;
+					background: url('http://luckyideas.mx/out/wings/tab-fb/img/bg-promos-fade.png');
+					z-index: 1;
+				}
+
+				#dailyPromo{
+					position: absolute;
+					width: 100%;
+					height: 590px;
+					z-index: 10;
+				}
+
+					.promociones{
+						position: absolute;
+						left: 0;
+						opacity: 1;
+						-webkit-transition: all 0.4s ease-in-out;
+						-moz-transition: all 0.4s ease-in-out;
+						-ms-transition: all 0.4s ease-in-out;
+						-o-transition: all 0.4s ease-in-out;
+						transition: all 0.4s ease-in-out;
+					}
+
+				#navDailyPromo{
+					position: absolute;
+					top: 630px;
+					width: 280px;
+					height: 30px;
+					margin: auto; left: 0; right: 0;
+					z-index: 100;
+				}
+					#navDailyPromo li{
+						text-decoration: none;
+						display: inline-block;
+					}
+
+					.daysPromo{
+						position: relative;
+						width: 30px;
+						height: 30px;
+						margin-left: 5px;
+						margin-right: 5px;
+						line-height: 30px;
+						text-align: center;
+						border-radius: 50%;
+						float: left;
+						font-weight: 700;
+						text-transform: uppercase;
+						font-size: 14px;
+						cursor: pointer;
+						color: #fedc0a;
+					}
+
+					.daysPromo:hover, #nav-Cumple:hover {
+						background-color: #fedc0a;
+						color: #202020;
+					}
+
+					.currentPromo{
+						background-color: #fedc0a !important;
+						color: #202020 !important;
+					}
+
+				#nav-Cumple{
+					position: absolute;
+					width: 180px;
+					height: 30px;
+					margin: auto;
+					right: 0; left: 0;
+					top: 670px;
+					border-radius: 5px;
+					line-height: 30px;
+					text-transform: uppercase;
+					text-align: center;
+					font-weight: 700;
+					font-size: 14px;
+					color: #fedc0a;
+					cursor: pointer;
+				}
+			/* END PROMOS STYLE  */
+
+			/* INIT SECTIONS STYLE */
+				.sectionsHex{
+					position: absolute;
+					width: 274px;
+					height: 238px;
+					z-index: 10;
+					overflow: hidden;
+				}
+
+					.hex1, .hex2{
+						position: absolute;
+						width: 274px;
+						height: 238px;
+						overflow: hidden;
+						-webkit-transform: rotate(60deg);
+						   -moz-transform: rotate(60deg);
+							-ms-transform: rotate(60deg);
+							 -o-transform: rotate(60deg);
+								transform: rotate(60deg);
+
+						-webkit-transform-origin: 137px 119px;
+						   -moz-transform-origin: 137px 119px;
+							-ms-transform-origin: 137px 119px;
+							 -o-transform-origin: 137px 119px;
+								transform-origin: 137px 119px;
+					}
+
+						.clickableSection{
+							position: absolute;
+							width: 274px;
+							height: 238px;
+							cursor: pointer;
+							-webkit-transform: rotate(240deg);
+							   -moz-transform: rotate(240deg);
+								-ms-transform: rotate(240deg);
+								 -o-transform: rotate(240deg);
+									transform: rotate(240deg);
+						}
+
+							.nameSections{
+								position: absolute;
+								opacity: 0;
+								z-index: 1;
+
+								-webkit-transition: all 0.25s ease-in-out;
+								   -moz-transition: all 0.25s ease-in-out;
+									-ms-transition: all 0.25s ease-in-out;
+									 -o-transition: all 0.25s ease-in-out;
+										transition: all 0.25s ease-in-out;
+							}
+
+							.nameSections:hover{
+								opacity: 1;
+								background-color: rgba(254,220,10,0.5);
+							}
+
+							.bgSections{
+								position: absolute;
+							}
+
+				#cervezasHex, #alitasHex{
+					top: 640px;
+				}
+
+				#cervezasHex, #botanasHex {
+					left: 40px;
+				}
+
+				#alitasHex, #postresHex {
+					right: 40px;
+				}
+
+				#paquetesHex, #platillosHex{
+					margin: auto;
+					right: 0;
+					left: 0;
+				}
+
+				#paquetesHex{
+					top: 770px;
+				}
+
+				#platillosHex{
+					top: 1030px;
+				}
+
+				#postresHex, #botanasHex{
+					top: 900px;
+				}
+			/* END SECTIONS STYLE  */
+
+			/* INIT LIGHTBOXES STYLE  */
+				.lightboxMenuWrapper{
+					position: absolute;
+					z-index: 1000000;
+					overflow: scroll;
+					opacity: 1;
+					left: 0;
+					-webkit-transition: all 0.4s ease-in-out;
+						-moz-transition: all 0.4s ease-in-out;
+						-ms-transition: all 0.4s ease-in-out;
+						-o-transition: all 0.4s ease-in-out;
+						transition: all 0.4s ease-in-out;
+
+					width: 100%;
+					height: 100%;
+					background-color: rgba(20,20,20,0.8);
+				}
+
+					.closingLightbox{
+						position: absolute;
+						top: 630px;
+						right: 30px;
+						cursor: pointer;
+					}
+
+					.allBoxes{
+						position: absolute;
+						width: 550px;
+						margin: auto;
+						right: 0; left: 0;
+						top: 650px;
+						list-style-type: none;
+					}
+
+						.eachBox{
+							position: relative;
+							width: 100%;
+							margin-bottom: 30px;
+
+							-webkit-transition: all 0.4s ease-in-out;
+							   -moz-transition: all 0.4s ease-in-out;
+								-ms-transition: all 0.4s ease-in-out;
+								 -o-transition: all 0.4s ease-in-out;
+									transition: all 0.4s ease-in-out;
+						}
+
+						#box-Nacionales, #box-Internacionales {
+							height: 251px;
+						}
+
+						#box-Familiares{
+							height: 156px;
+						}
+
+						#box-Barriles{
+							height: 194px;
+						}
+
+						#box-Micheladas{
+							height: 175px;
+						}
+
+						#box-Rusas{
+							height: 137px;
+						}
+
+						#box-NoAlcohol{
+							height: 365px;
+						}
+
+						.closedBox{
+							height: 88px !important;
+							overflow: hidden;
+						}
+
+							.boxTitle{
+								position: relative;
+								z-index: 1;
+								width: 100%;
+								height: 88px;
+								cursor: pointer;
+								background: url('http://luckyideas.mx/out/wings/tab-fb/img/bg-tabla.png');
+							}
+
+								.boxTitle h2{
+									position: absolute;
+									line-height: 88px;
+									left: 30px;
+									font-size: 28px;
+									font-weight: 700;
+									color: #fedc0a;
+									text-shadow: 3px 3px 2px #202020;
+									text-transform: uppercase;
+									text-decoration: none;
+								}
+
+								.statusArrow{
+									position: absolute;
+									width: 46px;
+									height: 38px;
+									top: 28px;
+									right: 35px;
+
+									-webkit-transition: all 0.4s ease-in-out;
+									   -moz-transition: all 0.4s ease-in-out;
+										-ms-transition: all 0.4s ease-in-out;
+										 -o-transition: all 0.4s ease-in-out;
+											transition: all 0.4s ease-in-out;
+								}
+
+								.arrowOpened{
+									-webkit-transform: rotate(180deg);
+									   -moz-transform: rotate(180deg);
+										-ms-transform: rotate(180deg);
+										 -o-transform: rotate(180deg);
+											transform: rotate(180deg);
+								}
+
+							.boxProductsWrapper{
+								position: relative;
+								width: 520px;
+								top: -10px;
+								left: 15px;
+								background-color: #000;
+							}
+
+								.productsList{
+									list-style-type: none;
+									color: white;
+									padding-top: 15px;
+									padding-bottom: 15px;
+								}
+
+									.eachProduct{
+										position: relative;
+										width: 100%;
+										height: 18px;
+										list-style-type: none;
+										border-bottom: 1px dashed #555;
+									}
+
+									#alitasMenuTitle, .biggerProduct {
+										height: 45px !important;
+									}
+
+										.eachProduct h5{
+											position: absolute;
+											left: 30px;
+											font-size: 13px;
+											line-height: 19px;
+										}
+
+										.eachProduct h6{
+											position: absolute;
+											left: 433px;
+											font-size: 13px;
+											line-height: 19px;
+											color: #fedc0a;
+										}
+
+										.eachSemiProduct h5{
+											left: 55px !important;
+											font-weight: 400;
+										}
+			/* END LIGHTBOXES STYLE  */
+		</style>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
+	</head>
+	<body>
+		<div id="fbTabWrapper">
+			<div id="fullWrapper">
+
+				<div id="loaderWrapper">
+					<div id="logo-Loader">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/aw-logo.svg" alt="Alas Wings Menú">
+					</div>
+
+					<div id="loader">
+						<div id="bubbleWrapper">
+							<div id="bigBubble" class="shape"></div>
+							<div id="littleBubble" class="shape"></div>
+							<div id="tinyBubble" class="shape"></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="promosBg"></div>
+				<div id="dailyPromo">
+					<div id="promo-1" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-1.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-2" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-2.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-3" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-3.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-4" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-4.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-5" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-5.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-6" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-6.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-0" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-7.png" alt="Promociones Alas Wings">
+					</div>
+					<div id="promo-c" class="promociones hidePromo">
+						<img src="http://luckyideas.mx/out/wings/tab-fb/img/promo-c.png" alt="Promociones Alas Wings">
+					</div>
+				</div>
+
+				<nav id="navDailyPromo">
+					<ul>
+						<li id="nav-Lu" class="daysPromo">Lu</li>
+						<li id="nav-Ma" class="daysPromo">Ma</li>
+						<li id="nav-Mi" class="daysPromo">Mi</li>
+						<li id="nav-Ju" class="daysPromo">Ju</li>
+						<li id="nav-Vi" class="daysPromo">Vi</li>
+						<li id="nav-Sa" class="daysPromo">Sa</li>
+						<li id="nav-Do" class="daysPromo">Do</li>
+					</ul>
+				</nav>
+
+				<div id="nav-Cumple">
+					<p>Cumpleañero</p>
+				</div>
+
+				<!-- INIT HEXAGON SECTIONS -->
+					<div id="cervezasHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openCervezas" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-cervezas.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-cervezas.jpg" alt="Alas Wings Secciones">
+									
+								</div>
+							</span>
+						</span>
+					</div>
+
+
+					<div id="alitasHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openAlitas" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-alitas.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-alitas.jpg" alt="Alas Wings Secciones">
+								</div>
+							</span>
+						</span>
+					</div>
+
+
+					<div id="paquetesHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openPaquetes" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-paquetes.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-paquetes.jpg" alt="Alas Wings Secciones">
+									
+								</div>
+							</span>
+						</span>
+					</div>
+
+
+					<div id="botanasHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openBotanas" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-botanas.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-botanas.jpg" alt="Alas Wings Secciones">
+									
+								</div>
+							</span>
+						</span>
+					</div>
+
+
+					<div id="postresHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openPostres" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-postres.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-postres.jpg" alt="Alas Wings Secciones">
+									
+								</div>
+							</span>
+						</span>
+					</div>
+
+
+					<div id="platillosHex" class="sectionsHex">
+						<span class="hex1">
+							<span class="hex2">
+								<div id="openPlatillos" class="clickableSection">
+									<img class="nameSections" src="http://luckyideas.mx/out/wings/tab-fb/img/name-platillos.png" alt="Alas Wings Secciones">
+									<img class="bgSections" src="http://luckyideas.mx/out/wings/tab-fb/img/section-platillos.jpg" alt="Alas Wings Secciones">
+									
+								</div>
+							</span>
+						</span>
+					</div>
+				<!-- END HEXAGON SECTIONS -->
+
+				<!-- INIT LIGHTBOXES SECTIONS -->
+
+					<!-- CERVEZAS -->
+					<div id="lightbox-Cervezas" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Cervezas" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+
+							<!-- CERVEZAS NACIONALES -->
+							<li id="box-Nacionales" class="eachBox">
+								<div id="title-Nacionales" class="boxTitle">
+									<h2>Nacionales</h2>
+									<div id="arrow-Nacionales" class="statusArrow arrowOpened">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Corona / Corona Light / Victoria / Corona Ámbar Extra / León</h5>
+											<h6>$22.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Cubeta con 5</h5>
+											<h6>$105.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Cubeta con 10</h5>
+											<h6>$200.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Pacífico</h5>
+											<h6>$24.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Modelo Especial / Negra Modelo</h5>
+											<h6>$26.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Minerva Colonial / Viena / Stout</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Cucapá Obscura / Honey</h5>
+											<h6>$35.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<!-- CERVEZAS INTERNACIONALES -->
+							<li id="box-Internacionales" class="eachBox closedBox">
+								<div id="title-Internacionales" class="boxTitle">
+									<h2>Internacionales</h2>
+									<div id="arrow-Internacionales" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>ESTADOS UNIDOS</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Bud Light</h5>
+											<h6>$30.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Miller Genuine Draft/ Miller Lite</h5>
+											<h6>$30.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>ALEMANIA</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Erdinger</h5>
+											<h6>$80.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>CUBA</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Bucanero Fuerte</h5>
+											<h6>$50.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<!-- CERVEZAS FAMILIARES -->
+							<li id="box-Familiares" class="eachBox closedBox">
+								<div id="title-Familiares" class="boxTitle">
+									<h2>Familiares</h2>
+									<div id="arrow-Familiares" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Corona Light / Corona Ámbar</h5>
+											<h6>$45.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Miller High Life / Miller Lite / León Mega / Pacífico</h5>
+											<h6>$65.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<!-- CERVEZAS Barriles (Clara / Obscura) -->
+							<li id="box-Barriles" class="eachBox closedBox">
+								<div id="title-Barriles" class="boxTitle">
+									<h2>Barriles (Clara / Obscura)</h2>
+									<div id="arrow-Barriles" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Tarro</h5>
+											<h6>$18.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Tarro Grande</h5>
+											<h6>$40.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Jarra</h5>
+											<h6>$65.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Tritón</h5>
+											<h6>$180.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<!-- CERVEZAS Micheladas -->
+							<li id="box-Micheladas" class="eachBox closedBox">
+								<div id="title-Micheladas" class="boxTitle">
+									<h2>Micheladas</h2>
+									<div id="arrow-Micheladas" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Sencilla / Clamato / Tamarindo / Mango / Durazno / Piña</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Che-Bull</h5>
+											<h6>$55.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Empepinada</h5>
+											<h6>$55.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+
+
+							<!-- CERVEZAS Rusas -->
+							<li id="box-Rusas" class="eachBox closedBox">
+								<div id="title-Rusas" class="boxTitle">
+									<h2>Rusas</h2>
+									<div id="arrow-Rusas" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Sencilla / Clamato / Refresco</h5>
+											<h6>$45.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<!-- CERVEZAS Sin Alcohol -->
+							<li id="box-NoAlcohol" class="eachBox closedBox">
+								<div id="title-NoAlcohol" class="boxTitle">
+									<h2>Sin Alcohol</h2>
+									<div id="arrow-NoAlcohol" class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Contra el Torito</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>O’Doul’s Cerveza sin alcohol</h5>
+											<h6>$25.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Michelada conductor</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Refrescos</h5>
+											<h6>$18.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Arizona</h5>
+											<h6>$22.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Limonada y Naranjada</h5>
+											<h6>$25.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Limonada y Naranjada de litro</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Agua embotellada</h5>
+											<h6>$15.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Clamato (sal y limón o sal, limón y salsas) chico</h5>
+											<h6>$25.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Clamato (sal y limón o sal, limón y salsas) grande</h5>
+											<h6>$55.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Preparados para Michelada (cerveza a elección, precio no incluido)</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Sal, limón, salsas</h5>
+											<h6>$10.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Sal, limón, salsas y Clamato</h5>
+											<h6>$22.00</h6>
+										</li>
+
+
+
+									</ul>
+								</div>
+							</li>
+
+
+
+						</ul>
+					</div>
+					
+					<!-- ALITAS -->
+					<div id="lightbox-Alitas" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Alitas" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+							<li id="box-Alitas" class="eachBox">
+								<div id="title-Alitas" class="boxTitle">
+									<h2>Alitas</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li id="alitasMenuTitle" class="eachProduct">
+											<h5>Extra-Hot/ Hot / Cajón / Blend / BBQ / Tamarindo / BBQ Mango / <br>
+											Teriyaki / Miel y Mostaza / Ajo Parmesano / Pimienta y limón</h5>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>5 alitas (mismo sabor, sin aderezo)</h5>
+											<h6>$39.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>10 alitas (mismo sabor, sin aderezo)</h5>
+											<h6>$65.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>20 alitas (mismo sabor, sin aderezo)</h5>
+											<h6>$120.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Salsa extra</h5>
+											<h6>$7.00</h6>
+										</li>
+
+										<li class="eachProduct eachSemiProduct">
+											<h5>Aderezo ranch / blue cheese / chipotle</h5>
+											<h6>$7.00</h6>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- BOTANAS -->
+					<div id="lightbox-Botanas" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Botanas" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+							<li id="box-Botanas" class="eachBox">
+								<div id="title-Botanas" class="boxTitle">
+									<h2>Botanas</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Vegetales</h5>
+											<h6>$30.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Vegetales con camarón</h5>
+											<h6>$69.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Papas doradas</h5>
+											<h6>$30.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Munchers</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Papas a la Francesa</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Gajos de Papa</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Aros de Cebolla</h5>
+											<h6>$35.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Dedos de Queso</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Cecina</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Tequeños</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Boneless</h5>
+											<h6>$65.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- PLATILLOS -->
+					<div id="lightbox-Platillos" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Platillos" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+							<li id="box-Platillos" class="eachBox">
+								<div id="title-Platillos" class="boxTitle">
+									<h2>Hamburguesas</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Clásica</h5>
+											<h6>$55.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Brava</h5>
+											<h6>$60.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>BBQ</h5>
+											<h6>$60.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Camarón</h5>
+											<h6>$69.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Pollo</h5>
+											<h6>$60.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Acompañadas de papas</h5>
+											<h6>$10.00</h6>
+										</li>
+
+
+									</ul>
+								</div>
+							</li>
+
+							<li id="box-" class="eachBox">
+								<div id="title-Otros" class="boxTitle">
+									<h2>Otros</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Baguette de pollo</h5>
+											<h6>$55.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Tenders</h5>
+											<h6>$69.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Ensalada César o Mixta</h5>
+											<h6>$50.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Ensalada de Camarón</h5>
+											<h6>$69.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Costillas</h5>
+											<h6>$69.00</h6>
+										</li>
+
+
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- PAQUETES -->
+					<div id="lightbox-Paquetes" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Paquetes" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+							<li id="box-Paquetes" class="eachBox">
+								<div id="title-Paquetes" class="boxTitle">
+									<h2>Paquetes</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>En clásicos de fútbol, todos los paquetes aumentan $30.00</h5>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Paquete 1: Cubeta con 10 + 10 alitas</h5>
+											<h6>$220.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Paquete 2: Cubeta con 5 + Jarra + 10 alitas</h5>
+											<h6>$200.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Paquete 3: 2 jarras + 10 alitas</h5>
+											<h6>$180.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Paquete 4: 2 caguamas + 10 alitas + Papas a la francesa</h5>
+											<h6>$200.00</h6>
+										</li>
+
+										<li class="eachProduct">
+											<h5>Paquete 5: Tritón + 10 alitas + Papas a la francesa o gajos</h5>
+											<h6>$250.00</h6>
+										</li>
+
+										<li class="eachProduct biggerProduct">
+											<h5>Paquete 6: Tritón + 20 alitas + 2 Papas a la francesa + <br>
+											2 Papas gajos + 2 Aros de cebolla</h5>
+											<h6>$460.00</h6>
+										</li>
+
+
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- POSTRE -->
+					<div id="lightbox-Postre" class="lightboxMenuWrapper hideObject hidePromo">
+						<div id="close-Postre" class="closingLightbox">
+							<img src="http://luckyideas.mx/out/wings/tab-fb/img/tache.png" alt="Alas Wings Cerrar">
+						</div>
+
+						<ul class="allBoxes">
+							<li id="box-Postre" class="eachBox">
+								<div id="title-Postre" class="boxTitle">
+									<h2>Postre</h2>
+									<div class="statusArrow">
+										<img src="http://luckyideas.mx/out/wings/tab-fb/img/status-arrow.png" alt="Alas Wings Status Arrow">
+									</div>
+								</div>
+
+								<div class="boxProductsWrapper">
+									<ul class="productsList">
+										<li class="eachProduct">
+											<h5>Volcán de chocolate con helado de vainilla</h5>
+											<h6>$45.00</h6>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				<!-- END LIGHTBOXES SECTIONS -->
+
+			</div>
+
+		</div>
+
+		
+
+
+
+
+
+		<script>
+
+			setInterval(function(){
+				$('#loader').toggleClass('intervalLoader');
+			},700);
+
+			jQuery(document).ready(function($) {
+
+				// INIT LOADER INTERACTION
+					setTimeout(function(){
+						$('#loaderWrapper').addClass('hideLoader');
+					},1000);
+
+					setTimeout(function(){
+						$('#loaderWrapper').addClass('eraseLoader');
+					},1700);
+				// END LOADER INTERACTION
+				
+				// INIT PROMOS INTERACTION
+					var date = new Date();
+					var todayDay = date.getDay();	
+						
+					if(todayDay == 0){
+						$('#promo-0').removeClass('hidePromo');
+						$('#nav-Do').addClass('currentPromo');
+
+					} else if (todayDay == 1) {
+						$('#promo-1').removeClass('hidePromo');
+						$('#nav-Lu').addClass('currentPromo');
+
+					} else if (todayDay == 2) {
+						$('#promo-2').removeClass('hidePromo');
+						$('#nav-Ma').addClass('currentPromo');
+
+					} else if (todayDay == 3) {
+						$('#promo-3').removeClass('hidePromo');
+						$('#nav-Mi').addClass('currentPromo');
+
+					} else if (todayDay == 4) {
+						$('#promo-4').removeClass('hidePromo');
+						$('#nav-Ju').addClass('currentPromo');
+
+					} else if (todayDay == 5) {
+						$('#promo-5').removeClass('hidePromo');
+						$('#nav-Vi').addClass('currentPromo');
+
+					} else if (todayDay == 6) {
+						$('#promo-6').removeClass('hidePromo');
+						$('#nav-Sa').addClass('currentPromo');
+
+					}
+
+					// INIT NAV PROMOS INTERACTION
+						$('#nav-Lu').click(function(event) {
+							$('#promo-1').removeClass('hidePromo');
+							$('#nav-Lu').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+
+
+						});
+
+						$('#nav-Ma').click(function(event) {
+							$('#promo-2').removeClass('hidePromo');
+							$('#nav-Ma').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Mi').click(function(event) {
+							$('#promo-3').removeClass('hidePromo');
+							$('#nav-Mi').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Ju').click(function(event) {
+							$('#promo-4').removeClass('hidePromo');
+							$('#nav-Ju').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Vi').click(function(event) {
+							$('#promo-5').removeClass('hidePromo');
+							$('#nav-Vi').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Sa').click(function(event) {
+							$('#promo-6').removeClass('hidePromo');
+							$('#nav-Sa').addClass('currentPromo');
+
+							$('#promo-0').addClass('hidePromo');
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Do').click(function(event) {
+							$('#promo-0').removeClass('hidePromo');
+							$('#nav-Do').addClass('currentPromo');
+
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-c').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Cumple').removeClass('currentPromo');
+						});
+
+						$('#nav-Cumple').click(function(event) {
+							$('#promo-c').removeClass('hidePromo');
+							$('#nav-Cumple').addClass('currentPromo');
+
+							$('#promo-1').addClass('hidePromo');
+							$('#promo-2').addClass('hidePromo');
+							$('#promo-3').addClass('hidePromo');
+							$('#promo-4').addClass('hidePromo');
+							$('#promo-5').addClass('hidePromo');
+							$('#promo-6').addClass('hidePromo');
+							$('#promo-0').addClass('hidePromo');
+
+							$('#nav-Lu').removeClass('currentPromo');
+							$('#nav-Ma').removeClass('currentPromo');
+							$('#nav-Mi').removeClass('currentPromo');
+							$('#nav-Ju').removeClass('currentPromo');
+							$('#nav-Vi').removeClass('currentPromo');
+							$('#nav-Sa').removeClass('currentPromo');
+							$('#nav-Do').removeClass('currentPromo');
+						});
+
+					// END NAV PROMOS INTERACTION
+
+					
+					console.log(todayDay);
+				// END PROMOS INTERACTION
+
+				// INIT SECTIONS INTERACTION
+
+					// INIT OPEN LIGHTBOXES
+						$('#cervezasHex').click(function(event) {
+							$('#lightbox-Cervezas').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Cervezas').removeClass('hidePromo');
+							},10);
+						});
+
+						$('#alitasHex').click(function(event) {
+							$('#lightbox-Alitas').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Alitas').removeClass('hidePromo');
+							},10);
+
+						});
+
+						$('#botanasHex').click(function(event) {
+							$('#lightbox-Botanas').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Botanas').removeClass('hidePromo');
+							},10);
+
+						});
+
+						$('#platillosHex').click(function(event) {
+							$('#lightbox-Platillos').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Platillos').removeClass('hidePromo');
+							},10);
+
+						});
+
+						$('#paquetesHex').click(function(event) {
+							$('#lightbox-Paquetes').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Paquetes').removeClass('hidePromo');
+							},10);
+
+						});
+
+						$('#postresHex').click(function(event) {
+							$('#lightbox-Postre').removeClass('hideObject');
+							setTimeout(function(){
+								$('#lightbox-Postre').removeClass('hidePromo');
+							},10);
+
+						});
+					// END OPEN LIGHTBOXES
+
+					// INIT CLOSE LIGHTBOXES
+						$('#close-Cervezas').click(function(event) {
+							$('#lightbox-Cervezas').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Cervezas').addClass('hideObject');
+							},500);
+
+						});
+
+						$('#close-Alitas').click(function(event) {
+							$('#lightbox-Alitas').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Alitas').addClass('hideObject');
+							},500);
+
+						});
+
+						$('#close-Botanas').click(function(event) {
+							$('#lightbox-Botanas').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Botanas').addClass('hideObject');
+							},500);
+
+						});
+
+						$('#close-Platillos').click(function(event) {
+							$('#lightbox-Platillos').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Platillos').addClass('hideObject');
+							},500);
+
+						});
+
+						$('#close-Paquetes').click(function(event) {
+							$('#lightbox-Paquetes').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Paquetes').addClass('hideObject');
+							},500);
+
+						});
+
+						$('#close-Postre').click(function(event) {
+							$('#lightbox-Postre').addClass('hidePromo');
+							setTimeout(function(){
+								$('#lightbox-Postre').addClass('hideObject');
+							},500);
+
+						});
+					// END CLOSE LIGHTBOXES
+
+					// INIT SHOW/HIDE MENU BOXES
+						$('#title-Nacionales').click(function(event) {
+							$('#box-Nacionales').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Nacionales').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-Internacionales').click(function(event) {
+							$('#box-Internacionales').removeClass('closedBox');
+
+							$('#box-Nacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Internacionales').addClass('arrowOpened');
+							
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-Familiares').click(function(event) {
+							$('#box-Familiares').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Nacionales').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Familiares').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-Barriles').click(function(event) {
+							$('#box-Barriles').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Nacionales').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Barriles').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-Micheladas').click(function(event) {
+							$('#box-Micheladas').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Nacionales').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Micheladas').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-Rusas').click(function(event) {
+							$('#box-Rusas').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Nacionales').addClass('closedBox');
+							$('#box-NoAlcohol').addClass('closedBox');
+
+							$('#arrow-Rusas').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+							$('#arrow-NoAlcohol').removeClass('arrowOpened');
+
+
+						});
+
+						$('#title-NoAlcohol').click(function(event) {
+							$('#box-NoAlcohol').removeClass('closedBox');
+
+							$('#box-Internacionales').addClass('closedBox');
+							$('#box-Familiares').addClass('closedBox');
+							$('#box-Barriles').addClass('closedBox');
+							$('#box-Micheladas').addClass('closedBox');
+							$('#box-Rusas').addClass('closedBox');
+							$('#box-Nacionales').addClass('closedBox');
+
+							$('#arrow-NoAlcohol').addClass('arrowOpened');
+							
+							$('#arrow-Internacionales').removeClass('arrowOpened');
+							$('#arrow-Familiares').removeClass('arrowOpened');
+							$('#arrow-Barriles').removeClass('arrowOpened');
+							$('#arrow-Micheladas').removeClass('arrowOpened');
+							$('#arrow-Rusas').removeClass('arrowOpened');
+							$('#arrow-Nacionales').removeClass('arrowOpened');
+
+
+						});
+
+
+					// END SHOW/HIDE MENU BOXES
+				// END SECTIONS INTERACTION
+
+			});
+		</script>
+	</body>
+</html>
